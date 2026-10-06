@@ -23,6 +23,9 @@ export default function ChatPage() {
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
+  
+    if (!group) return;
+  
     sendMessage(group.id, text);
     setText("");
   }
